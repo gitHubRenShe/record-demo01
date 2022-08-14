@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 480px;
+            height: auto;
+            border:1px black solid;
+            margin:100px auto;
+            text-align: center;
+            border-radius: 10px;
+            background-color:rgb(193, 206, 219);
+        }
+
+        .word{
+            margin-top:20px;
+            color:white;
+        }
+
+        .input input{
+            display: block;
+            margin:20px auto;
+            width: 240px;
+            height: 30px;
+            border: none;
+            border-bottom: 2px white solid;
+            background-color: transparent;
+            color:white;
+            font-size: 17px;
+            padding: 0 10px;
+        }
+
+        .btn button{
+            margin-top: 20px;
+            width: 90px;
+            height: 40px;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .btn button:hover{
+            background-image: linear-gradient(19deg,#21D4FD 0%,#2135FF 100%);
+        }
+        #登录{
+            margin-right: 15px;
+        }
+        #注册{
+            margin-left: 15px;
+        }
+        .input{
+            position: relative;
+        }
+
+        .input span{
+            position: absolute;
+            left: 40px;
+            color: white;
+            font-size: 20px;
+        }
+        .用户名{
+            top: 2000px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="word">
+        <h1>帅才记账小程序</h1>
+    </div>
+    <div class="input">
+        <span>用户名：</span>
+        <input type="text" placeholder="请输入用户名" id="user"/>
+        <span>密 码：</span>
+        <input type="password" placeholder="请输入密码" id="psd"/>
+    </div>
+    <div class="btn">
+        <button id="登录">登录</button>
+        <button id="注册">注册</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,9 +1,12 @@
 package com.shuaicai.record.service;
 
 
+import com.shuaicai.record.pojo.ConsumptionRecord;
 import com.shuaicai.record.pojo.User;
 import com.shuaicai.record.pojo.Verification;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @ClassName LoginService
@@ -17,4 +20,6 @@ import org.springframework.stereotype.Service;
 public interface LoginService {
     //登录方法
     Object login(Verification verification);
+    //查询所有消费记录
+    List<ConsumptionRecord> consumptionAll();
 }

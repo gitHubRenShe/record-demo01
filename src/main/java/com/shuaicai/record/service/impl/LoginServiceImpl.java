@@ -1,12 +1,17 @@
 package com.shuaicai.record.service.impl;
 
+import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
+import com.shuaicai.record.mapper.ConsumptionRecordMapper;
 import com.shuaicai.record.mapper.UserMapper;
 import com.shuaicai.record.mapper.VerificationMapper;
+import com.shuaicai.record.pojo.ConsumptionRecord;
 import com.shuaicai.record.pojo.User;
 import com.shuaicai.record.pojo.Verification;
 import com.shuaicai.record.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @ClassName LoginServiceImpl
@@ -22,7 +27,8 @@ public class LoginServiceImpl implements LoginService{
     @Autowired
     private VerificationMapper verificationMapper;
 
-
+    @Autowired
+    private ConsumptionRecordMapper consumptionRecordMapper;
 
     @Override
     public Object login(Verification verification) {
@@ -36,6 +42,9 @@ public class LoginServiceImpl implements LoginService{
         }
         return "login";
     }
-
-
+    //查询所有消费记录
+    public List<ConsumptionRecord> consumptionAll(){
+        List<ConsumptionRecord> consumptionRecords = consumptionRecordMapper.selectList(new QueryChainWrapper<>());
+        return consumptionRecords;
+    }
 }

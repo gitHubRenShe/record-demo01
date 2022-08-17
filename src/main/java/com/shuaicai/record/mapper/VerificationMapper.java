@@ -16,4 +16,6 @@ import org.apache.ibatis.annotations.Param;
 public interface VerificationMapper extends BaseMapper<Verification> {
 
     Verification getVerification(@Param("accountNumber") String accountNumber);
+
+
 }

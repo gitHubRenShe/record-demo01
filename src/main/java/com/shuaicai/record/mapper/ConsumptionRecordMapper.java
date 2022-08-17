@@ -1,6 +1,7 @@
 package com.shuaicai.record.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.shuaicai.record.pojo.ConsumptionRecord;
 
 /**
  * @ClassName ConsumptionRecordMapper
@@ -10,5 +11,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @PackagePath com.shuaicai.record.mapper
  * @Version 1.0
  */
-public interface ConsumptionRecordMapper extends BaseMapper<ConsumptionRecordMapper> {
+public interface ConsumptionRecordMapper extends BaseMapper<ConsumptionRecord> {
 }

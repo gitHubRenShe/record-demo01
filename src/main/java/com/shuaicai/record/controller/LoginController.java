@@ -51,7 +51,7 @@ public class LoginController {
     //查询全部消费记录
     @GetMapping("/ConsumptionAll")
     public ResponseResult consumptionAll(@CurrentUserId String userId) {
-        List<ConsumptionRecord> consumptionRecords = loginService.consumptionAll(userId);
+        List<ConsumptionRecord> consumptionRecords = loginService.consumptionAll("1");
 
         return new ResponseResult(200, "全部记录", consumptionRecords);
     }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.shuaicai.record.pojo.User;
 import com.shuaicai.record.pojo.Verification;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  * @ClassName UserMapper
@@ -13,7 +14,7 @@ import org.apache.ibatis.annotations.Param;
  * @PackagePath com.shuaicai.record.mapper
  * @Version 1.0
  */
-
+@Repository
 public interface UserMapper extends BaseMapper<User> {
 
 

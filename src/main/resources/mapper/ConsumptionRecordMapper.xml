@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shuaicai.record.mapper.ConsumptionRecordMapper">
+    <select id="consumptionAll" resultType="com.shuaicai.record.pojo.ConsumptionRecord">
+        select id, amount, Payee, type, consumer, create_time
+        from consumption_record
+        where consumer = #{userId}
+    </select>
+</mapper>

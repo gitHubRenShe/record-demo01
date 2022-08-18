@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.shuaicai.record.mapper.VerificationMapper">
     <select id="getVerification" resultType="com.shuaicai.record.pojo.Verification">
-        select *
+        select id,account_number,pass_word,create_time
         from verification
-        where account_number = #{accountNumber};
+        where account_number = #{accountNumber} and pass_word = #{passWord};
     </select>
 </mapper>

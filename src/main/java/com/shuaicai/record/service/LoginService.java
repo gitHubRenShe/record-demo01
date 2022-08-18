@@ -18,8 +18,8 @@ import java.util.List;
  */
 //@Service
 public interface LoginService {
-    //登录方法
-    Object login(Verification verification);
+    //登录验证方法
+    Verification login(Verification verification);
     //查询所有消费记录
-    List<ConsumptionRecord> consumptionAll();
+    List<ConsumptionRecord> consumptionAll(String userId);
 }
